@@ -4,8 +4,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
@@ -17,15 +17,14 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.example.gemstoreapp.presentation.pages.HomePage
-import com.example.gemstoreapp.presentation.pages.NotificationPage
-import com.example.gemstoreapp.presentation.pages.SettingsPage
+import com.example.gemstoreapp.presentation.navigation.NavGraph
+import com.example.gemstoreapp.presentation.navigation.Route
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
     val navItems = listOf(
         NavItem("Home", Icons.Default.Home),
-        NavItem("Notifications", Icons.Default.Notifications),
+        NavItem("Favourites", Icons.Default.ShoppingCart),
         NavItem("Settings", Icons.Default.Settings)
     )
     var bottomBarState by remember{
@@ -59,9 +58,9 @@ fun MainScreen(modifier: Modifier = Modifier) {
 @Composable
 fun ContentScreen(modifier: Modifier = Modifier, bottomBarState: Int) {
     when(bottomBarState){
-        0 -> HomePage()
-        1 -> NotificationPage()
-        2 -> SettingsPage()
+        0 -> NavGraph(startDestination = Route.HomeScreen.toString())
+        1 -> NavGraph(startDestination = Route.FavouriteScreen.toString())
+        2 -> NavGraph(startDestination = Route.SettingScreen.toString())
     }
 
 }

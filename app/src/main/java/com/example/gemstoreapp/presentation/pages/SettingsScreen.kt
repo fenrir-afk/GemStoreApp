@@ -9,12 +9,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun NotificationPage(modifier: Modifier = Modifier) {
+fun SettingsScreen(modifier: Modifier = Modifier) {
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Text(text = "NotificationPage")
+        Text(text = "SettingsScreen")
     }
 }
