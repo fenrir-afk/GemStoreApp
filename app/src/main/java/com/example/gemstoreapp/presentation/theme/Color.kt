@@ -1,4 +1,4 @@
-package com.example.gemstoreapp.ui.theme
+package com.example.gemstoreapp.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
