@@ -1,4 +1,4 @@
-package com.example.gemstoreapp.presentation
+package com.example.gemstoreapp.presentation.pages
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -17,6 +17,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import com.example.gemstoreapp.presentation.models.NavItem
 import com.example.gemstoreapp.presentation.navigation.NavGraph
 import com.example.gemstoreapp.presentation.navigation.Route
 

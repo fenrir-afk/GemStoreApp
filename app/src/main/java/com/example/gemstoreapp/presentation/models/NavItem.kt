@@ -1,4 +1,4 @@
-package com.example.gemstoreapp.presentation
+package com.example.gemstoreapp.presentation.models
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
